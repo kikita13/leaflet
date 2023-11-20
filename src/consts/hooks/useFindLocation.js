@@ -9,9 +9,7 @@ export const useFindLocation = () => {
       .then((data) => data.json())
       .then((c) => setInfo(c))
       .then(() => {
-        fetch(//   `https://api.kierratys.info/collectionspots/?api_key=1088873da4e98f7edfa6db96ddc01c57c7ea9365&postal_code=${info?.postal}&limit=1000`
-          `https://api.kierratys.info/collectionspots/?api_key=1088873da4e98f7edfa6db96ddc01c57c7ea9365&municipality=helsinki&limit=1000`
-        )
+        fetch(`https://api.kierratys.info/collectionspots/?api_key=1088873da4e98f7edfa6db96ddc01c57c7ea9365&postal_code=${info?.postal}&limit=1000`)
           .then((data) => data.json())
           .then((c) =>
             c.count > 0
