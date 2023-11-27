@@ -32,7 +32,7 @@ const Map = () => {
         {result &&
           result?.results.map(
             (spot) =>
-              spot.geometry.coordinates && (
+              spot?.geometry?.coordinates && (
                 <Marker
                 key={spot.spot_id}
                   position={[spot.geometry.coordinates[1], spot.geometry.coordinates[0]]}
